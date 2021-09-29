@@ -16,6 +16,8 @@ describe('GeneGameCoin', function () {
     // deploy GeneGameCoin
     const GeneGameCoin = await ethers.getContractFactory('GeneGameCoin')
     const geneGameCoin = await GeneGameCoin.deploy(
+        'Gene Game Coin',
+        'GGC',      
         mockToken.address,
         '1000000000000000', // 1 MTN = 1000 GGC
         '500000',           // 5/1000 for fee        

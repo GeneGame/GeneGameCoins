@@ -36,10 +36,12 @@ contract GeneGameCoin is Ownable, ERC20Burnable {
         @param _feeRate         fee rate charged by protocol
      */
     constructor(
+        string memory _name,
+        string memory _symbol,
         address _collateral,
         uint256 _exchangeRate,
         uint256 _feeRate
-    ) ERC20("Gene Game Coin", "GGC") {
+    ) ERC20(_name, _symbol) {
         collateral = IERC20(_collateral);
         exchangeRate = _exchangeRate;
         updateFeeRate(_feeRate);
